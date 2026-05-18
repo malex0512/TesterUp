@@ -105,7 +105,7 @@ box-shadow:0 0 32px rgba(0,208,132,0.3),0 8px 32px rgba(0,0,0,0.6);
 animation:logo-float 3s ease-in-out infinite;
 position:relative;z-index:1;
 }
-.elig-logo img{width:80px;height:80px;object-fit:cover;display:block;border-radius:22px;}
+.elig-logo svg{width:80px;height:80px;display:block;border-radius:22px;}
 
 .elig-spinner{
 width:48px;height:48px;
@@ -206,7 +206,7 @@ animation:logo-float 4s ease-in-out infinite;
 50%{transform:translateY(-4px);box-shadow:0 0 44px rgba(0,208,132,0.35),0 14px 40px rgba(0,0,0,0.5);}
 }
 
-.logo-wrap img{width:84px;height:84px;border-radius:24px;object-fit:cover;display:block;}
+.logo-wrap svg{width:84px;height:84px;border-radius:24px;display:block;}
 
 .app-name{
 font-family:'Sora',sans-serif;font-size:24px;font-weight:900;letter-spacing:-0.6px;
@@ -569,7 +569,14 @@ footer{margin-top:36px;text-align:center;padding:0 24px;}
 
 <div id="eligScreen" style="opacity:0;visibility:hidden;">
   <div class="elig-logo">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFn0lEQVR4nO2dW4hcVRSGv30mk0wmaZpM0pS2tE2bNjYmNlZpE6stKvZBKvggvgg+iG8i+CD4IPgkfREfBPEFPgg+KCgV9EEfKvZBfKptatPaNOnMZDLJZDLz+bCmsclM6p6ZM3vO3vX/YGBYw57LzP7Xv9Zea999oKioqKioqKioqKioqKioqEiDtsbWAnuBvUAXmABmAnXADKAWev87gDywBvgaWAasAtYCPwNzoZ8Zl/mGg7XAzm6E7AI6fF4bCH9P90InA+FfB7wPrARWht7XG2wGdgB3AncD9wIDPh9lC9AFvAS8BywNva87WAuFfN8P3G8YvK73v7gE/AH8AnwVep9Osw0Uch9wf6yQLmAr8D7w7YCOu9sw6InA6Tf0fS0M/e969V7fI7vP0O9eX97q09bQ82uANb7m2b78Wp8e6+N6KGA78FDo89qNfUAm9Blp0EToM9Kg2mXw4ZDPFGBW6PPaTctf9v/Y8t99vX+39b3+b9m6ZetX+Gz99wP/fRToM9L8L7bS2A6gY8gXWhmE8Baw9IDK+R6YvSgE9CshIAs9T6dbAnp1N8TPhZ4bY2wD9wBvAn0HWeZ6YL+h33YDPYbyVbZAn5EGfUYatCH0fTfEDwFvAnfE0v4P8KWh/I+mct6byvsf8CnQC/S8mX0A6G6Anws9N8bS/iXwNfB7WtoBvAe8ZijfAn1e6fPaTRXokYBnQ8+NMbeNfQs8byg/V8bIAn1e6fPaTRXowYDHDf3f6vPa7be0gC1Ad8B3wHeXwVsDngw9N9ZstfX/wWbC36NAn5GGasG/G/C9of9X+rx2a6vR1shGYDfgm8rZAt+fD72vN9gB7ALuBe4DBlXNdgG9wBvAmwFfH9C/NfT8GPs6GtkIDIDvebXg+9mB8Pd0LxTCHwj/CuBtYEXwKqgE9Blp0A8N4D3gcuj9O802UOj9vYFvT6XfSgR9RhpUhX4w4HeFPhuBvga6bY000gP6m9DnNQE9oE/R06Ar4Nuhz0aAt7aAbw99XhPQLfR0wNfAn6HP6bM/K6wCHjXgX+DbiMv+oO/N7APAkYDPBv77uO3vY/XF/D6gn3w85vWpEn044GuAn8Ztfw9gP8DvgW8pY6R6b6fC3wPeXp76D+t7R3r/mO9zI9D9vvePlfN/i2/oY+V8VMTwXf+q96/5vtWnPvD1qYF8Y28D30Zczu3g++Zf9f5V7+0V/wDfgv9P7w99Xv8XWzX7AnAi8N9Hw9/v77V6j/v9fXpCvyP66rE+b0SOfhK4OeS/iYf+69X9vtZnhn6fO/S7u6/v0yOD1vW+bK0+u/r67B66PntDz7N9eddXg31dfS/D0OfZp9b31dAnqNf7VOn78lZfE/X60fXpD/2+O6CvsQW+p1uBnkMsszM0NreL09p0gHnADKDGhH3G9C9u/m1r9bU88Bf6f5pNoM8ofZ9N8H0WfFp9Kk8g837wR6vC32n1qT6X5hL8O4E69uI7jY34bgC+O6pX+G2t7Ff46ZCPzXmF39bKPv67Q89V+GlVwVdYBTwVeq7CT6uC/yDwBdBX4adVwX8w4Cvw06rgvxXwy4KvwE+rgt8X/LuCr8BP6299XfDvDvgK/DSbV+GnZfTTCvwdwHeY+7bC36Pwl1shXWwFf0fh790K6WIr+A4Kf7wV0sVW8B0UfocrpIut4Dso/GGrvL3S46u8vdKjL2uVd9gq76B9XpUnnS3w97vEtxL8tPyvBP9pEtxK8OfK/z7gWeZ7X6/C30nwb7eC7yPAnzC9XoVfoPBPGfoXm6u0g/8D8G1m6R+3+tYhLwPvAbeG/v92ZfB/Ar7fA69U9NfU1sjS2B8GfXbI/xN7fWssuWvKsh9Z9oN/Teyv7N/Zvyv7X/K9v7Psh9XN3XvIsu8f1XvIsvdf6j1kKfr2vGfMPh6f87XGZ5yvOea7/Eofb8DHe/XfbyH/bXUv8Sj6w9S68Lfp+wO6V1zYmXgUFRUVFRUVFRUVFRUVFRUV9e+w9gveC36XmD4bIQAAAABJRU5ErkJggg==" alt="FreeCash Logo">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#00d084"/>
+      <path d="M54.5,26.2 C59.5,26.2 63.8,28.2 67.2,31.6 L76.8,22 C70.8,16 62.8,12.5 54.5,12.5 C39.5,12.5 26.8,22.2 22,35.8 L35.2,35.8 C38.5,29.8 45.8,26.2 54.5,26.2 Z" fill="#ffffff"/>
+      <path d="M45.5,73.8 C40.5,73.8 36.2,71.8 32.8,68.4 L23.2,78 C29.2,84 37.2,87.5 45.5,87.5 C60.5,87.5 73.2,77.8 78,64.2 L64.8,64.2 C61.5,70.2 54.2,73.8 45.5,73.8 Z" fill="#ffffff"/>
+      <path d="M48,22 L48,34 L54,34 L54,22 Z" fill="#ffffff"/>
+      <path d="M46,66 L46,78 L52,78 L52,66 Z" fill="#ffffff"/>
+      <path d="M30,42.5 C30,37.5 34.5,33.5 39.5,33.5 L58,33.5 L58,45.5 L42,45.5 C40.5,45.5 39.5,46.5 39.5,47.5 C39.5,48.5 40.5,49.5 42,49.5 L56.5,49.5 C64,49.5 70,55.5 70,63 C70,68 65.5,72 60.5,72 L42,72 L42,60 L58,60 C59.5,60 60.5,59 60.5,58 C60.5,57 59.5,56 58,56 L43.5,56 C36,56 30,50 30,42.5 Z" fill="#ffffff"/>
+    </svg>
   </div>
   <div class="elig-spinner"></div>
   <div class="elig-title">Prüfe deine Berechtigung&hellip;</div>
@@ -589,4 +596,263 @@ footer{margin-top:36px;text-align:center;padding:0 24px;}
 
   <div class="header">
     <div class="logo-wrap">
-      <img src="data:image/png;base64,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
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect width="100" height="100" fill="#00d084"/>
+        <path d="M54.5,26.2 C59.5,26.2 63.8,28.2 67.2,31.6 L76.8,22 C70.8,16 62.8,12.5 54.5,12.5 C39.5,12.5 26.8,22.2 22,35.8 L35.2,35.8 C38.5,29.8 45.8,26.2 54.5,26.2 Z" fill="#ffffff"/>
+        <path d="M45.5,73.8 C40.5,73.8 36.2,71.8 32.8,68.4 L23.2,78 C29.2,84 37.2,87.5 45.5,87.5 C60.5,87.5 73.2,77.8 78,64.2 L64.8,64.2 C61.5,70.2 54.2,73.8 45.5,73.8 Z" fill="#ffffff"/>
+        <path d="M48,22 L48,34 L54,34 L54,22 Z" fill="#ffffff"/>
+        <path d="M46,66 L46,78 L52,78 L52,66 Z" fill="#ffffff"/>
+        <path d="M30,42.5 C30,37.5 34.5,33.5 39.5,33.5 L58,33.5 L58,45.5 L42,45.5 C40.5,45.5 39.5,46.5 39.5,47.5 C39.5,48.5 40.5,49.5 42,49.5 L56.5,49.5 C64,49.5 70,55.5 70,63 C70,68 65.5,72 60.5,72 L42,72 L42,60 L58,60 C59.5,60 60.5,59 60.5,58 C60.5,57 59.5,56 58,56 L43.5,56 C36,56 30,50 30,42.5 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+    <div class="app-name">FreeCash</div>
+    <div class="stars-row">
+      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span class="rating-num">4.8/5</span>
+    </div>
+    <div class="rating-sub">Exklusive Prämien</div>
+    <div class="spots-badge">
+      <div class="spots-dot"></div>
+      Begrenzte Plätze noch verfügbar
+    </div>
+  </div>
+
+  <div class="progress-wrap" id="progressWrap">
+    <div class="progress-labels">
+      <span class="progress-label">Fortschritt</span>
+      <span class="step-indicator" id="stepIndicator">1 / 3</span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </div>
+
+  <div class="card" id="quizCard">
+
+<div class="slide active" id="slide1">
+  <div class="urgency-badge">&#128293; Beliebte Angebote füllen sich schnell</div>
+  <div class="slide-headline">Welche Art von Prämien interessiert dich am meisten?</div>
+  <div class="slide-sub">Nutzer schalten gerade Prämienangebote in nur wenigen Minuten frei.</div>
+  <div class="btn-group">
+    <button class="choice-btn" onclick="nextSlide(2)"><span class="btn-emoji">&#127918;</span> Spiele testen</button>
+    <button class="choice-btn" onclick="nextSlide(2)"><span class="btn-emoji">&#128241;</span> Neue Apps ausprobieren</button>
+    <button class="choice-btn" onclick="nextSlide(2)"><span class="btn-emoji">&#128221;</span> Umfragen ausfüllen</button>
+
+  </div>
+  <div class="trust-text"><strong>Tausende Nutzer</strong> verdienen bereits täglich Prämien.</div>
+</div>
+
+<div class="slide" id="slide2">
+  <div class="slide-headline">Wie alt bist du?</div>
+  <div class="slide-sub">Das hilft uns, dir die wertvollsten Prämienangebote in deiner Region anzuzeigen.</div>
+  <div class="btn-group">
+    <button class="choice-btn" onclick="nextSlide(3)"><span class="btn-emoji">&#129489;</span> Unter 18 Jahre</button>
+    <button class="choice-btn" onclick="nextSlide(3)"><span class="btn-emoji">&#128587;</span> 18 Jahre oder älter</button>
+  </div>
+  <div class="green-note">Manche exklusiven Angebote sind nur für berechtigte Nutzer verfügbar.</div>
+</div>
+
+<div class="slide" id="slide3">
+  <div class="slide-headline">Wie viel möchtest du monatlich verdienen?</div>
+  <div class="slide-sub">Je mehr Aufgaben du erfüllst, desto mehr Prämienchancen kannst du freischalten.</div>
+  <div class="info-card">&#128202; Die meisten aktiven Nutzer wählen Angebote zwischen 500 € – 1.000 € monatlich.</div>
+  <div class="btn-group" id="earningBtns">
+    <button class="choice-btn" onclick="selectEarning(this)"><span class="btn-emoji">&#128181;</span> 50 € – 100 €</button>
+    <button class="choice-btn" onclick="selectEarning(this)"><span class="btn-emoji">&#128176;</span> 100 € – 500 €</button>
+    <button class="choice-btn" onclick="selectEarning(this)"><span class="btn-emoji">&#127942;</span> 500 € – 1.000 €</button>
+    <button class="choice-btn" onclick="selectEarning(this)"><span class="btn-emoji">&#128640;</span> 1.000 €+</button>
+  </div>
+  <div class="trust-checks">
+    <div class="trust-check"><span class="check-icon">&#10004;</span> Viele Nutzer erledigen täglich einfache Aufgaben</div>
+    <div class="trust-check"><span class="check-icon">&#10004;</span> Neue Prämienchancen werden regelmäßig hinzugefügt</div>
+    <div class="trust-check"><span class="check-icon">&#10004;</span> Beliebte Angebote können schnell vergriffen sein</div>
+    <div class="trust-check"><span class="check-icon">&#10004;</span> Manche Nutzer schalten Premium-Angebote in Minuten frei</div>
+  </div>
+</div>
+
+  </div><div class="final-section" id="finalSection">
+    <div class="final-card">
+
+  <div class="unlock-wrap">
+    <div class="unlock-ring"></div>
+    <div class="unlock-ring2"></div>
+    <div class="unlock-icon">&#128275;</div>
+  </div>
+
+  <div class="final-headline">Dein Prämienzugang ist fast bereit</div>
+  <div class="final-sub">Du bist nur noch einen Schritt davon entfernt, verfügbare Prämienangebote freizuschalten.</div>
+
+  <div class="offer-prompt-card">
+    <span class="offer-prompt-icon">&#9888;</span>
+    <span>Schließe mindestens <strong>1 Prämienangebot</strong> ab, um den vollen Zugang zu aktivieren und weitere Möglichkeiten freizuschalten.</span>
+  </div>
+
+  <button class="cta-btn" onclick="handleCTA()">Weiter zu den verfügbaren Angeboten &#8594;</button>
+
+  <div class="beginner-line">Die meisten Nutzer starten mit einem einfachen Einsteiger-Angebot, das nur wenige Minuten dauert.</div>
+
+  <div class="final-trust">
+    <div class="final-trust-item"><span class="chk">&#10003;</span> Tausende Nutzer verwenden FreeCash bereits täglich</div>
+    <div class="final-trust-item"><span class="chk">&#10003;</span> 100 % kostenlos starten</div>
+    <div class="final-trust-item"><span class="chk">&#10003;</span> Kein Abonnement erforderlich</div>
+  </div>
+
+  <div class="live-activity">
+    <div class="live-activity-title">Live-Aktivität</div>
+    <div class="live-item"><div class="live-dot"></div> Kürzlich neue Prämienangebote hinzugefügt</div>
+    <div class="live-item"><div class="live-dot"></div> Einsteiger-freundliche Aufgaben verfügbar</div>
+    <div class="live-item"><div class="live-dot"></div> Manche Angebote schließen, sobald Plätze voll sind</div>
+  </div>
+
+  <div class="urgency-footer">
+    Nutzer, die ihr erstes Angebot abschließen, schalten häufig weitere Prämienchancen frei.
+  </div>
+
+  <div class="urgency-line">Verfügbare Prämienangebote können sich täglich aktualisieren.</div>
+
+</div>
+
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">Datenschutz</a><span class="sep">&middot;</span>
+      <a href="#">Nutzungsbedingungen</a><span class="sep">&middot;</span>
+      <a href="#">Kontakt</a>
+    </div>
+    <div class="footer-copy">&copy; 2025 FreeCash. Alle Rechte vorbehalten.</div>
+  </footer>
+
+</div><script>
+var OFFER_URL = "https://raintrkr.com/r/eyJ0IjoiZnJlZWNhc2gtY3BpIiwidGlkIjoiOGJmYTMwMmMyZDliZDk4ZmNjYjEiLCJ0cyI6MTc3ODUzMDQ2NTU3OX0?feb=1";
+
+var eligMsgs = [
+  "Verfügbare Prämien-Aufgaben werden gesucht…",
+  "Einsteigerfreundliche Angebote werden abgeglichen…",
+  "Prämien für neue Nutzer werden freigeschaltet…",
+  "Verfügbare Angebote werden aktiviert…",
+  "Dein Prämien-Dashboard wird vorbereitet…"
+];
+
+function runEligScreen(onDone) {
+  var bar = document.getElementById('eligBar');
+  var msg = document.getElementById('eligMsg');
+  var totalDur = 3200;
+  var msgInterval = totalDur / eligMsgs.length;
+  var idx = 0;
+  var startTime = null;
+
+  bar.style.width = '0%';
+  msg.textContent = eligMsgs[0];
+  msg.style.opacity = '1';
+
+  function step(ts) {
+    if (!startTime) startTime = ts;
+    var elapsed = ts - startTime;
+    var pct = Math.min((elapsed / totalDur) * 100, 100);
+    bar.style.width = pct + '%';
+
+    var newIdx = Math.min(Math.floor(elapsed / msgInterval), eligMsgs.length - 1);
+    if (newIdx !== idx) {
+      idx = newIdx;
+      msg.style.opacity = '0';
+      (function(i) {
+        setTimeout(function() {
+          msg.textContent = eligMsgs[i];
+          msg.style.opacity = '1';
+        }, 180);
+      })(newIdx);
+    }
+
+    if (elapsed < totalDur) {
+      requestAnimationFrame(step);
+    } else {
+      setTimeout(function() {
+        if (typeof onDone === 'function') onDone();
+      }, 200);
+    }
+  }
+  requestAnimationFrame(step);
+}
+
+var currentSlide = 1;
+
+function nextSlide(target) {
+  var current = document.getElementById('slide' + currentSlide);
+  current.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
+  current.style.opacity = '0';
+  current.style.transform = 'translateY(-16px)';
+  setTimeout(function() {
+    current.classList.remove('active');
+    current.style.cssText = '';
+    var next = document.getElementById('slide' + target);
+    next.classList.add('active');
+    currentSlide = target;
+    document.getElementById('stepIndicator').textContent = target + ' / 3';
+    var pcts = ['', '33%', '66%', '100%'];
+    document.getElementById('progressFill').style.width = pcts[target];
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }, 210);
+}
+
+function selectEarning(btn) {
+  var btns = document.querySelectorAll('#earningBtns .choice-btn');
+  for (var i = 0; i < btns.length; i++) btns[i].classList.remove('selected');
+  btn.classList.add('selected');
+
+  setTimeout(function() {
+    document.getElementById('progressFill').style.width = '100%';
+    document.getElementById('stepIndicator').textContent = '3 / 3';
+    var quizCard = document.getElementById('quizCard');
+    var progressWrap = document.getElementById('progressWrap');
+    quizCard.style.transition = 'opacity 0.32s ease, transform 0.32s ease';
+    quizCard.style.opacity = '0';
+    quizCard.style.transform = 'translateY(-18px)';
+    progressWrap.style.transition = 'opacity 0.32s ease';
+    progressWrap.style.opacity = '0';
+
+    setTimeout(function() {
+      quizCard.style.display = 'none';
+      progressWrap.style.display = 'none';
+      window.scrollTo({top: 0, behavior: 'smooth'});
+
+      var eligScreen = document.getElementById('eligScreen');
+      eligScreen.style.visibility = 'visible';
+      eligScreen.style.opacity = '1';
+      eligScreen.style.display = 'flex';
+
+      runEligScreen(function() {
+        eligScreen.style.transition = 'opacity 0.45s ease';
+        eligScreen.style.opacity = '0';
+        setTimeout(function() {
+          eligScreen.style.display = 'none';
+          eligScreen.style.visibility = 'hidden';
+          document.getElementById('finalSection').classList.add('active');
+          window.scrollTo({top: 0, behavior: 'smooth'});
+        }, 460);
+      });
+    }, 330);
+  }, 500);
+}
+
+function handleCTA() {
+  var overlay = document.getElementById('redirectOverlay');
+  var redirMsg = document.getElementById('redirMsg');
+  overlay.classList.add('show');
+
+  setTimeout(function() {
+    redirMsg.style.opacity = '0';
+    setTimeout(function() {
+      redirMsg.textContent = 'Verbindung zum Prämien-Dashboard wird hergestellt…';
+      redirMsg.style.opacity = '1';
+    }, 200);
+  }, 700);
+
+  setTimeout(function() {
+    window.location.href = OFFER_URL;
+  }, 1500);
+}
+</script>
+
+</body>
+</html>
